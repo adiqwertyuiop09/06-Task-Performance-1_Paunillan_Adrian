@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Pipes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,32 +9,27 @@ namespace CalculatorPrivateAssembly
 {
     public class BasicComputation
     {
-        float num1;
-        float num2;
-        float ans;
+        double num1;
+        double num2;     
 
-        public float Addition(float num1, float num2, float ans)
+        public static double Addition(double num1, double num2)
         { 
-            ans = ans + num1;
-            return ans;
+            return  num1 + num2;
         }
 
-        public float Subtraction(float num1, float num2, float ans)
+        public static double Subtraction(double num1, double num2)
         {
-            ans = ans - num1;
-            return ans;
+            return num1 - num2;
         }
 
-        public float Multiplication(float num1, float num2, float ans)
+        public static double Multiplication(double num1, double num2)
         {
-            ans = ans * num1;
-            return ans;
+            return num1 * num2;
         }
 
-        public float Division(float num1, float num2, float ans)
+        public static double Division(double num1, double num2)
         {
-            ans = ans / num1;
-            return ans;
+            return num1 / num2;
         }
     }
 }

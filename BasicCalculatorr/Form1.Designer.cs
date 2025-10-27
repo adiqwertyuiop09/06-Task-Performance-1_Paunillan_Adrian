@@ -32,7 +32,7 @@
             this.num1Txt = new System.Windows.Forms.TextBox();
             this.comboOperator = new System.Windows.Forms.ComboBox();
             this.num2Txt = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
             this.computeBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -68,16 +68,15 @@
             this.num2Txt.Size = new System.Drawing.Size(163, 20);
             this.num2Txt.TabIndex = 3;
             // 
-            // label2
+            // totalLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(323, 260);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Total:";
-
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLabel.Location = new System.Drawing.Point(323, 260);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(66, 25);
+            this.totalLabel.TabIndex = 4;
+            this.totalLabel.Text = "Total:";
             // 
             // computeBtn
             // 
@@ -87,7 +86,7 @@
             this.computeBtn.TabIndex = 5;
             this.computeBtn.Text = "COMPUTE";
             this.computeBtn.UseVisualStyleBackColor = true;
-            
+            this.computeBtn.Click += new System.EventHandler(this.computeBtn_Click);
             // 
             // Form1
             // 
@@ -95,16 +94,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.computeBtn);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.totalLabel);
             this.Controls.Add(this.num2Txt);
             this.Controls.Add(this.comboOperator);
             this.Controls.Add(this.num1Txt);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -113,7 +112,7 @@
         private System.Windows.Forms.TextBox num1Txt;
         private System.Windows.Forms.ComboBox comboOperator;
         private System.Windows.Forms.TextBox num2Txt;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Button computeBtn;
     }
 }
