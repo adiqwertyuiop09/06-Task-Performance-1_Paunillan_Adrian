@@ -17,10 +17,7 @@ namespace BasicCalculatorr
         public Form1()
         {
             InitializeComponent();
-            comboOperator.Items.Add("+");
-            comboOperator.Items.Add("-");
-            comboOperator.Items.Add("*");
-            comboOperator.Items.Add("/");
+
         }
 
         private void computeBtn_Click(object sender, EventArgs e)
@@ -49,5 +46,7 @@ namespace BasicCalculatorr
                 totalLabel.Text = ans.ToString();
             }
         }
+
+        
     }
 }

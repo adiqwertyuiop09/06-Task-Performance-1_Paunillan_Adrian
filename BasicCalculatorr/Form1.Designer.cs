@@ -45,6 +45,7 @@
             this.label1.Size = new System.Drawing.Size(168, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Basic Calculator";
+          
             // 
             // num1Txt
             // 
@@ -56,6 +57,11 @@
             // comboOperator
             // 
             this.comboOperator.FormattingEnabled = true;
+            this.comboOperator.Items.AddRange(new object[] {
+            "+",
+            "-",
+            "*",
+            "/"});
             this.comboOperator.Location = new System.Drawing.Point(334, 163);
             this.comboOperator.Name = "comboOperator";
             this.comboOperator.Size = new System.Drawing.Size(48, 21);
@@ -80,12 +86,13 @@
             // 
             // computeBtn
             // 
+            this.computeBtn.BackColor = System.Drawing.Color.Red;
             this.computeBtn.Location = new System.Drawing.Point(316, 309);
             this.computeBtn.Name = "computeBtn";
             this.computeBtn.Size = new System.Drawing.Size(75, 23);
             this.computeBtn.TabIndex = 5;
             this.computeBtn.Text = "COMPUTE";
-            this.computeBtn.UseVisualStyleBackColor = true;
+            this.computeBtn.UseVisualStyleBackColor = false;
             this.computeBtn.Click += new System.EventHandler(this.computeBtn_Click);
             // 
             // Form1
@@ -101,6 +108,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
